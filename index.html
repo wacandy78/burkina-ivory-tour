@@ -68,7 +68,7 @@
   /* HERO */
   .hero{position:relative;min-height:100vh;display:flex;align-items:flex-end;padding:0 48px 80px;overflow:hidden}
   @media(max-width:768px){.hero{padding:0 24px 60px}}
-  .hero-bg{position:absolute;inset:0;background-image:url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNiAxMCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ieE1pZFlNaWQgc2xpY2UiPjxyZWN0IHdpZHRoPSIxNiIgaGVpZ2h0PSIxMCIgZmlsbD0iI0U4REZDQSIvPjwvc3ZnPg==');background-size:cover;background-position:center;filter:brightness(0.55) contrast(1.05) saturate(0.85);z-index:0}
+  .hero-bg{position:absolute;inset:0;background-image:url('https://raw.githubusercontent.com/Wacandy78/burkina-ivory-tour/main/IMG_8948.jpeg');background-size:cover;background-position:center;filter:brightness(0.45) contrast(1.05) saturate(0.85);z-index:0}
   .hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(14,14,12,0.45) 0%,rgba(14,14,12,0.15) 30%,rgba(14,14,12,0.65) 75%,rgba(14,14,12,0.95) 100%)}
   .hero-inner{position:relative;z-index:2;max-width:1400px;margin:0 auto;width:100%}
   .hero-eyebrow{display:flex;align-items:center;gap:14px;margin-bottom:36px}
@@ -80,10 +80,6 @@
   .hero-meta-row > div .meta{margin-bottom:8px}
   .hero-meta-row > div .val{font-family:var(--serif);font-size:32px;font-weight:400;line-height:1;color:var(--paper)}
   .hero-meta-row > div .val em{font-style:italic;color:var(--accent)}
-  .scroll-hint{position:absolute;left:48px;bottom:24px;z-index:3;font-family:var(--sans);font-size:10px;text-transform:uppercase;letter-spacing:0.3em;color:var(--muted);display:flex;align-items:center;gap:12px;writing-mode:vertical-rl;transform:rotate(180deg)}
-  .scroll-hint::after{content:"";width:1px;height:48px;background:var(--accent);animation:scrollLine 2s ease-in-out infinite}
-  @keyframes scrollLine{0%,100%{transform:scaleY(0.4);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}}
-  @media(max-width:768px){.scroll-hint{display:none}}
 
   section{padding:140px 48px;position:relative}
   @media(max-width:768px){section{padding:80px 24px}}
@@ -135,15 +131,25 @@
   .day-body .loc{font-family:var(--sans);font-size:11px;text-transform:uppercase;letter-spacing:0.25em;color:var(--accent-deep);margin-bottom:16px;display:inline-flex;align-items:center;gap:10px}
   .day-body .loc::before{content:"";width:8px;height:1px;background:var(--accent-deep)}
   .day-body p{font-size:15.5px;line-height:1.85;color:rgba(26,24,20,0.7)}
-  .day-image{aspect-ratio:4/3;background-size:cover;background-position:center;filter:contrast(1.05) saturate(0.95)}
+  .day-body .meal-row{display:flex;gap:16px;flex-wrap:wrap;margin-top:14px;padding-top:14px;border-top:1px solid var(--rule-dark)}
+  .day-body .meal{font-family:var(--sans);font-size:10.5px;text-transform:uppercase;letter-spacing:0.18em;color:rgba(26,24,20,0.5)}
+  .day-body .meal em{color:var(--accent-deep);font-style:normal;font-weight:500}
+  .day-image{aspect-ratio:4/3;overflow:hidden;filter:contrast(1.05) saturate(0.95)}
+  .day-image img{width:100%;height:100%;object-fit:cover;display:block}
   @media(max-width:900px){.day-image{aspect-ratio:16/10}}
+
+  /* border divider */
+  .border-divider{text-align:center;padding:56px 0;border-top:1px solid var(--rule-dark);border-bottom:1px solid var(--rule-dark);margin:56px 0}
+  .border-divider p.eyebrow-dark{font-family:var(--serif);font-size:24px;font-weight:400;font-style:italic;color:var(--accent-deep);margin-bottom:10px;letter-spacing:0}
+  .border-divider p.sub{font-size:15px;color:rgba(26,24,20,0.6)}
 
   /* STAYS */
   .stays{background:var(--bg-2);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
   .stay-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:64px 48px}
   @media(max-width:900px){.stay-grid{grid-template-columns:1fr;gap:48px}}
   .stay{display:flex;flex-direction:column;gap:24px}
-  .stay-img{aspect-ratio:16/10;background-size:cover;background-position:center;filter:contrast(1.05) saturate(0.9);transition:filter .4s}
+  .stay-img{aspect-ratio:16/10;overflow:hidden;filter:contrast(1.05) saturate(0.9);transition:filter .4s}
+  .stay-img img{width:100%;height:100%;object-fit:cover;display:block}
   .stay:hover .stay-img{filter:contrast(1.1) saturate(1) brightness(1.05)}
   .stay-num{font-family:var(--serif);font-style:italic;color:var(--accent);font-size:18px;margin-bottom:8px}
   .stay h4{font-family:var(--serif);font-size:30px;font-weight:400;line-height:1.2;color:var(--paper);margin-bottom:12px}
@@ -151,18 +157,6 @@
   .stay .stay-meta span{font-family:var(--sans);font-size:11px;text-transform:uppercase;letter-spacing:0.22em;color:var(--muted)}
   .stay .stay-meta span em{color:var(--accent);font-style:normal}
   .stay p{font-size:15px;line-height:1.8;color:rgba(245,239,228,0.7)}
-
-  /* SPOTS */
-  .spots{background:var(--bg)}
-  .spot-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:48px 32px}
-  .spot{position:relative}
-  .spot-img{aspect-ratio:4/3;background-size:cover;background-position:center;filter:contrast(1.05) saturate(0.9);margin-bottom:20px;transition:filter .4s}
-  .spot:hover .spot-img{filter:contrast(1.1) saturate(1.05) brightness(1.05)}
-  .spot h5{font-family:var(--serif);font-size:22px;font-weight:500;line-height:1.25;color:var(--paper);margin-bottom:8px}
-  .spot .loc{font-family:var(--sans);font-size:10px;text-transform:uppercase;letter-spacing:0.25em;color:var(--accent);margin-bottom:10px}
-  .spot p{font-size:14.5px;line-height:1.75;color:rgba(245,239,228,0.65)}
-  @media(max-width:900px){.spot-grid{grid-template-columns:repeat(2,1fr);gap:40px 24px}}
-  @media(max-width:600px){.spot-grid{grid-template-columns:1fr;gap:40px}}
 
   /* EXPERIENCES */
   .experiences{background:var(--paper);color:var(--ink)}
@@ -185,9 +179,6 @@
   .price-row{display:grid;grid-template-columns:1fr 1.3fr;gap:96px;align-items:start}
   @media(max-width:900px){.price-row{grid-template-columns:1fr;gap:56px}}
   .price-display .meta{margin-bottom:16px}
-  .price-display .num{font-family:var(--serif);font-size:clamp(72px,9vw,128px);font-weight:300;line-height:1;color:var(--paper);margin-bottom:12px}
-  .price-display .num em{font-style:italic;color:var(--accent)}
-  .price-display .num .cur{font-size:0.45em;color:var(--accent);font-style:italic;margin-right:14px}
   .price-display .per{font-family:var(--sans);font-size:13px;color:var(--muted);letter-spacing:0.18em;text-transform:uppercase;margin-bottom:32px}
   .price-display .note{font-size:14.5px;line-height:1.8;color:rgba(245,239,228,0.65);max-width:380px;margin-bottom:32px}
   .cta-row{display:flex;gap:16px;flex-wrap:wrap}
@@ -246,26 +237,24 @@
       <span class="line">穿越<em>紅土</em>,</span>
       <span class="line">抵達<em>潟湖</em>。</span>
     </h1>
-    <p class="lead">十五天,從布吉納法索的薩赫勒高原啟程,跨越國界,沿著象牙海岸的世界遺產與大西洋潟湖一路向南——一場深入西非文化、信仰與日常的真實旅程。</p>
+    <p class="lead">十四天，從布吉納法索的薩赫勒高原啟程，跨越國界，沿著象牙海岸的世界遺產與大西洋潟湖一路向南——一場深入西非文化、信仰與日常的真實旅程。</p>
     <div class="hero-meta-row">
-      <div><div class="meta">行程</div><div class="val"><em>15</em> 天</div></div>
+      <div><div class="meta">行程</div><div class="val"><em>14</em> 天</div></div>
       <div><div class="meta">季節</div><div class="val">乾季 <em>24–35°</em></div></div>
       <div><div class="meta">國家</div><div class="val">BF <em>×</em> CI</div></div>
       <div><div class="meta">規模</div><div class="val">精緻<em>小團</em></div></div>
     </div>
   </div>
-  
 </header>
 
 <section class="intro" id="intro">
   <div class="wrap">
     <div class="intro-text reveal">
       <span class="eyebrow">Prologue · 序言</span>
-      <p class="quote" style="margin-top:32px">「東非有獅子,西非有故事。<br>而那些故事,需要有人帶你走進去。」</p>
-      <p class="body">台灣旅人最常踏進的非洲是東邊——肯亞的草原、坦尚尼亞的火山口。但在大陸的另一端,有一片更安靜、更被低估的土地。</p>
-      <p class="body" style="margin-top:20px">布吉納法索,泥磚教堂與電影之都;象牙海岸,潟湖、世界遺產、世界最大教堂。這趟行程不是觀光,而是一次有當地朋友帶領的、緩慢而深入的造訪。</p>
+      <p class="quote" style="margin-top:32px">「東非有獅子，西非有故事。<br>而那些故事，需要有人帶你走進去。」</p>
+      <p class="body">台灣旅人最常踏進的非洲是東邊——肯亞的草原、坦尚尼亞的火山口。但在大陸的另一端，有一片更安靜、更被低估的土地。</p>
+      <p class="body" style="margin-top:20px">布吉納法索，神聖鱷魚與革命家的故鄉；象牙海岸，潟湖、世界遺產、全球最大天主教堂。這趟行程不是觀光，而是一次有當地朋友帶領的、緩慢而深入的造訪。</p>
     </div>
-    <div class="intro-image reveal" style="background-image:url('images/abidjan-skyline.jpg')"></div>
   </div>
 </section>
 
@@ -278,7 +267,7 @@
       </div>
       <div>
         <h2 class="h2">四座<em>城市</em>,<br>四種西非。</h2>
-        <p class="desc lead">從薩赫勒的塵土到大西洋的鹽風,從非洲電影之都到世界最大的天主教堂——這趟旅程穿越了四座氣質截然不同的城市。</p>
+        <p class="desc lead">從薩赫勒的塵土到大西洋的鹽風，從神聖鱷魚池到世界最大的天主教堂——這趟旅程穿越了四座氣質截然不同的城市。</p>
       </div>
     </div>
     <div class="city-list">
@@ -288,36 +277,37 @@
           <div class="country"><span class="flag">●</span>BURKINA FASO</div>
           <h3 class="h3">瓦加杜古</h3>
         </div>
-        <p class="city-desc">非洲電影之都。泥磚大教堂與薩赫勒風格的大清真寺、傳統市集的塵土與布料,以及只有當地人帶得進去的私人招待所——這裡是這趟旅程的起點與靈魂。</p>
+        <p class="city-desc">非洲電影之都。花崗岩藝術雕塑、桑卡拉紀念館、蠟染村與傳統大市場，以及神聖鱷魚池的餵食體驗——這裡是旅程的起點與靈魂，也是整趟行程最難忘的文化衝擊。</p>
       </div>
       <div class="city reveal">
         <div class="city-num">II.</div>
         <div class="city-info">
-          <div class="country"><span class="flag">●</span>CÔTE D'IVOIRE</div>
+          <div class="country"><span class="flag">●</span>CÔTE D'IVOIRE · 東南海岸</div>
           <h3 class="h3">阿西尼海岸</h3>
         </div>
-        <p class="city-desc">大西洋與潟湖之間的細長沙洲,海濱度假村兩晚的悠閒。陽光、白沙、棕櫚樹的影子——是整趟探索路途中,專屬於海洋的停頓。</p>
+        <p class="city-desc">大西洋與潟湖之間的細長沙洲。潟湖生態導覽、遊船、漁村與服裝博物館，還有可可農場的巧克力製作體驗——是整趟探索路途中節奏最慢、最貼近自然的停頓。</p>
       </div>
       <div class="city reveal">
         <div class="city-num">III.</div>
         <div class="city-info">
-          <div class="country"><span class="flag">●</span>CÔTE D'IVOIRE</div>
-          <h3 class="h3">阿比讓</h3>
+          <div class="country"><span class="flag">●</span>CÔTE D'IVOIRE · 經濟首都</div>
+          <h3 class="h3">阿比尚</h3>
         </div>
-        <p class="city-desc">西非經濟樞紐。摩天樓與傳統市集並存,聖保祿主教座堂的傾斜十字、藍頂清真寺的剪影、Plateau 區的夜燈——西非最現代的脈搏。</p>
+        <p class="city-desc">西非經濟樞紐。傳統市集、藍色清真寺、聖保羅天主大教堂、手工藝品市集 CAVA 並存，世界遺產大巴薩與班科國家公園近在咫尺——西非最現代也最多元的城市脈搏。</p>
       </div>
       <div class="city reveal">
         <div class="city-num">IV.</div>
         <div class="city-info">
-          <div class="country"><span class="flag">●</span>CÔTE D'IVOIRE</div>
+          <div class="country"><span class="flag">●</span>CÔTE D'IVOIRE · 政治首都</div>
           <h3 class="h3">亞穆蘇克羅</h3>
         </div>
-        <p class="city-desc">象牙海岸的政治首都。在這裡矗立著金氏世界紀錄認證、全球最大的天主教教堂——和平之后聖殿,以及一場與當地家庭的真實連結。</p>
+        <p class="city-desc">象牙海岸的政治首都。矗立著金氏世界紀錄認證的全球最大天主教堂——和平之后聖殿，以及大清真寺與象牙海岸理工大學，是政治、信仰與知識交會的安靜首都。</p>
       </div>
     </div>
   </div>
 </section>
 
+<!-- ITINERARY -->
 <section class="itinerary" id="itinerary">
   <div class="wrap">
     <div class="section-head dark">
@@ -326,158 +316,224 @@
         <span class="chap">— 旅程日誌</span>
       </div>
       <div>
-        <h2 class="h2">十五日 <em>日誌</em>。</h2>
-        <p class="desc lead">從桃園啟程,經香港、伊斯坦堡兩段轉機抵達瓦加杜古;從薩赫勒紅土走到象牙海岸的世界遺產,再到全球最大的天主教堂。</p>
+        <h2 class="h2">十四日 <em>日誌</em>。</h2>
+        <p class="desc lead">從臺灣啟程，轉機飛抵瓦加杜古；從薩赫勒紅土走到象牙海岸的世界遺產、潟湖生態與全球最大天主教堂，再帶著故事返航。</p>
       </div>
     </div>
     <div class="day-list">
 
       <div class="day-row reveal">
-        <div class="day-marker"><div class="num">Day <em>01</em></div><span class="label">啟程</span></div>
+        <div class="day-marker"><div class="num">Day <em>01</em></div><span class="label">出發</span></div>
         <div class="day-body">
-          <div class="loc">TPE → HKG → IST → OUA</div>
-          <h4>台北啟程</h4>
-          <p>從桃園國際機場啟程,經香港與伊斯坦堡兩段轉機,正式踏上跨越歐亞與撒哈拉的西非之旅。</p>
+          <div class="loc">臺灣機場 → 轉機</div>
+          <h4>啟程</h4>
+          <p>臺灣機場出發，轉機飛往布吉納法索瓦加杜古。旅程從這一刻正式開始。</p>
+          <div class="meal-row">
+            <span class="meal">早 <em>×</em></span>
+            <span class="meal">午 <em>×</em></span>
+            <span class="meal">晚 <em>×</em></span>
+          </div>
         </div>
-        <div class="park-image"><img src="https://raw.githubusercontent.com/Wacandy78/burkina-ivory-tour/main/8006C32B-A474-4E76-BA30-3DF085D28B8B.png" alt="airport"></div>
+        <div class="day-image"><img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=800&h=600&fit=crop" alt="機場"></div>
       </div>
 
       <div class="day-row reveal">
         <div class="day-marker"><div class="num">Day <em>02</em></div><span class="label">抵達</span></div>
         <div class="day-body">
-          <div class="loc">瓦加杜古 · Ouagadougou</div>
-          <h4>抵達布吉納法索</h4>
-          <p>晚間 21:30 抵達瓦加杜古,當地朋友接機後直接入住市區四星飯店,養足精神迎接接下來的探索。</p>
+          <div class="loc">瓦加杜古 · OUA</div>
+          <h4>落地布吉納法索</h4>
+          <p>抵達瓦加杜古機場 OUA，接機後前往飯店休息調整時差。晚間初嚐西非風味，養足精神迎接接下來的探索。</p>
+          <div class="meal-row">
+            <span class="meal">早 <em>×</em></span>
+            <span class="meal">午 <em>×</em></span>
+            <span class="meal">晚 <em>餐廳非洲餐</em></span>
+          </div>
         </div>
-        <div class="park-image"><img src="https://raw.githubusercontent.com/Wacandy78/burkina-ivory-tour/main/IMG_8073.jpeg" alt="hotel"></div>
+        <div class="day-image"><img src="https://raw.githubusercontent.com/Wacandy78/burkina-ivory-tour/main/IMG_8073.jpeg" alt="hotel"></div>
       </div>
 
       <div class="day-row reveal">
-        <div class="day-marker"><div class="num">Day <em>03</em></div><span class="label">城市</span></div>
+        <div class="day-marker"><div class="num">Day <em>03</em></div><span class="label">探索</span></div>
         <div class="day-body">
-          <div class="loc">民族英雄紀念碑 · 大教堂</div>
-          <h4>泥磚與紀念碑</h4>
-          <p>走訪民族英雄紀念碑感受國家歷史脈絡,再前往以泥磚工法建造、外觀刻意「未完成」的瓦加杜古大教堂——非洲建築美學的代表作。</p>
+          <div class="loc">瓦加杜古市區</div>
+          <h4>雕塑、紀念館與大市場</h4>
+          <p>超市採買當地購物，參觀花崗岩藝術雕塑公園，走入桑卡拉紀念館認識「非洲切·格瓦拉」的革命故事，下午深入當地最大傳統市場感受最真實的薩赫勒日常。</p>
+          <div class="meal-row">
+            <span class="meal">早 <em>飯店內</em></span>
+            <span class="meal">午 <em>非洲歐洲自助餐</em></span>
+            <span class="meal">晚 <em>烤肉庭院餐</em></span>
+          </div>
         </div>
-        <div class="park-image"><img src="https://raw.githubusercontent.com/Wacandy78/burkina-ivory-tour/main/IMG_8938.jpeg" alt="教堂"></div>
+        <div class="day-image"><img src="https://raw.githubusercontent.com/Wacandy78/burkina-ivory-tour/main/IMG_8938.jpeg" alt="市場"></div>
       </div>
 
       <div class="day-row reveal">
-        <div class="day-marker"><div class="num">Day <em>04</em></div><span class="label">市集</span></div>
+        <div class="day-marker"><div class="num">Day <em>04</em></div><span class="label">工藝</span></div>
         <div class="day-body">
-          <div class="loc">傳統大市集 · 藝術村</div>
-          <h4>顏色與布料</h4>
-          <p>深入瓦加杜古最熱鬧的傳統市集,感受最真實的西非生活脈動;午後造訪藝術村,認識非洲手工藝師的雕刻、織品與面具創作。</p>
+          <div class="loc">戶外博物館 · 蠟染村 · 大教堂</div>
+          <h4>部落、布料與泥磚</h4>
+          <p>走訪戶外非洲部落博物館，體驗當地手工藝術；前往蠟染村親手體驗蠟染布製作；最後參觀以泥磚工法建造的瓦加杜古天主教堂，感受薩赫勒建築美學的獨特魅力。</p>
+          <div class="meal-row">
+            <span class="meal">早 <em>飯店內</em></span>
+            <span class="meal">午 <em>非式料理</em></span>
+            <span class="meal">晚 <em>西式料理</em></span>
+          </div>
         </div>
-        <div class="park-image"><img src="https://raw.githubusercontent.com/Wacandy78/burkina-ivory-tour/main/IMG_8941.jpeg" alt="市集"></div>
+        <div class="day-image"><img src="https://raw.githubusercontent.com/Wacandy78/burkina-ivory-tour/main/IMG_8941.jpeg" alt="蠟染"></div>
       </div>
 
       <div class="day-row reveal">
-        <div class="day-marker"><div class="num">Day <em>05</em></div><span class="label">日常</span></div>
+        <div class="day-marker"><div class="num">Day <em>05</em></div><span class="label">自然</span></div>
         <div class="day-body">
-          <div class="loc">百貨 · 超市 · 露天酒吧</div>
-          <h4>受邀的夜晚</h4>
-          <p>體驗當地居民的日常購物,挑選伴手禮;入夜後前往邀請制水煙露天酒吧,在星空下與當地朋友一起,感受西非夜生活的真實樣貌。</p>
+          <div class="loc">神聖鱷魚池 · 駝鳥農場 · 英雄紀念碑</div>
+          <h4>聖鱷、駝鳥與革命</h4>
+          <p>前往巴佐列神聖鱷魚池，親身餵食傳說中受神靈守護的聖鱷；造訪渡假村看駝鳥，感受薩赫勒野生動物的另一面；當地超市採購後，參觀國家英雄紀念碑。</p>
+          <div class="meal-row">
+            <span class="meal">早 <em>飯店內</em></span>
+            <span class="meal">午 <em>西非式料理</em></span>
+            <span class="meal">晚 <em>中式料理</em></span>
+          </div>
         </div>
-        <div class="park-image"><img src="https://raw.githubusercontent.com/Wacandy78/burkina-ivory-tour/main/IMG_2911.jpeg" alt="酒吧"></div>
+        <div class="day-image"><img src="https://raw.githubusercontent.com/Wacandy78/burkina-ivory-tour/main/IMG_8948.jpeg" alt="鱷魚"></div>
+      </div>
+
+      <!-- 跨境分隔 -->
+      <div class="border-divider">
+        <p class="eyebrow-dark">✈ 跨境延伸</p>
+        <p class="sub">從布吉納法索飛越國界，進入象牙海岸</p>
       </div>
 
       <div class="day-row reveal">
-        <div class="day-marker"><div class="num">Day <em>06</em></div><span class="label">自然</span></div>
+        <div class="day-marker"><div class="num">Day <em>06</em></div><span class="label">跨境</span></div>
         <div class="day-body">
-          <div class="loc">國家公園 · 鱷魚園 · 桑卡拉</div>
-          <h4>聖鱷與革命家</h4>
-          <p>走進國家公園親近野生動物,造訪傳說中受神靈守護的巴佐列聖鱷魚潭;再到桑卡拉紀念館,認識被稱為「非洲切·格瓦拉」的革命家。</p>
-        </div>
-        <div class="park-image"><img src="https://raw.githubusercontent.com/Wacandy78/burkina-ivory-tour/main/IMG_8948.jpeg" alt="鱷魚"></div>
-      </div>
-
-      <div class="day-row reveal">
-        <div class="day-marker"><div class="num">Day <em>07</em></div><span class="label">跨國</span></div>
-        <div class="day-body">
-          <div class="loc">OUA → ABJ → Assinie</div>
+          <div class="loc">OUA → ABJ → 世界遺產大巴薩 → Assinie</div>
           <h4>飛越國界</h4>
-          <p>內陸班機從瓦加杜古飛抵阿比讓,專車直接前往潟湖環繞的 Assini Beach 度假村,正式進入大西洋海濱模式。</p>
+          <p>瓦加杜古機場 OUA 起飛（預計 10:00），約 90 分鐘落地阿比尚機場 ABJ，途經世界遺產大巴薩 Grand-Bassam 停留感受殖民時代建築街區，專車直抵 Assinie 海邊度假村。</p>
+          <div class="meal-row">
+            <span class="meal">早 <em>飯店內</em></span>
+            <span class="meal">午 <em>當地料理</em></span>
+            <span class="meal">晚 <em>飯店內</em></span>
+          </div>
         </div>
-        <div class="park-image"><img src="https://raw.githubusercontent.com/Wacandy78/burkina-ivory-tour/main/IMG_8822.jpeg" alt="度假村"></div>
+        <div class="day-image"><img src="https://raw.githubusercontent.com/Wacandy78/burkina-ivory-tour/main/IMG_9113.jpeg" alt="大巴薩"></div>
       </div>
 
       <div class="day-row reveal">
-        <div class="day-marker"><div class="num">Day <em>08</em></div><span class="label">海濱</span></div>
+        <div class="day-marker"><div class="num">Day <em>07</em></div><span class="label">潟湖</span></div>
         <div class="day-body">
-          <div class="loc">阿西尼 · Assinie Beach</div>
+          <div class="loc">Assinie · 象牙海岸</div>
           <h4>潟湖的時間</h4>
-          <p>整日享受私人海灘、潟湖獨木舟、海鮮料理。陽光、棕櫚、海風,讓行程的節奏在這裡完全慢下來,迎接接下來的城市探索。</p>
+          <p>潟湖生態導覽，露天遊船（1小時）穿越潮間帶與漁村，參觀服裝博物館（Musée des Costumes）與加納梅特之家（Maison Ganamet），探索象牙海岸的文化與自然雙重面貌。</p>
+          <div class="meal-row">
+            <span class="meal">早 <em>飯店</em></span>
+            <span class="meal">午 <em>河景餐廳</em></span>
+            <span class="meal">晚 <em>非洲料理</em></span>
+          </div>
         </div>
-        <div class="park-image"><img src="https://raw.githubusercontent.com/Wacandy78/burkina-ivory-tour/main/IMG_8819.jpeg" alt="瀉湖"></div>
+        <div class="day-image"><img src="https://raw.githubusercontent.com/Wacandy78/burkina-ivory-tour/main/IMG_8819.jpeg" alt="潟湖"></div>
       </div>
 
       <div class="day-row reveal">
-        <div class="day-marker"><div class="num">Day <em>09</em></div><span class="label">遺產</span></div>
+        <div class="day-marker"><div class="num">Day <em>08</em></div><span class="label">可可</span></div>
         <div class="day-body">
-          <div class="loc">Grand-Bassam · 世界遺產</div>
-          <h4>殖民時光的痕跡</h4>
-          <p>沿岸返回阿比讓,中途停留法國殖民時期建立的世界遺產小鎮——大巴薩姆。走過褪色的殖民式建築,感受時間留下的安靜痕跡。</p>
+          <div class="loc">可可農場 · Assinie</div>
+          <h4>巧克力的誕生</h4>
+          <p>參觀可可豆農場，親身體驗從採摘到巧克力製作的完整過程，感受象牙海岸作為全球最大可可產國的驕傲。下午返回度假村休整，準備移往阿比尚。</p>
+          <div class="meal-row">
+            <span class="meal">早 <em>飯店內</em></span>
+            <span class="meal">午 <em>可可園區內</em></span>
+            <span class="meal">晚 <em>亞洲料理</em></span>
+          </div>
         </div>
-        <div class="park-image"><img src="https://raw.githubusercontent.com/Wacandy78/burkina-ivory-tour/main/IMG_9113.jpeg" alt="grand"></div>
+        <div class="day-image"><img src="https://raw.githubusercontent.com/Wacandy78/burkina-ivory-tour/main/IMG_8822.jpeg" alt="可可農場"></div>
       </div>
 
       <div class="day-row reveal">
-        <div class="day-marker"><div class="num">Day <em>10</em></div><span class="label">藝術</span></div>
+        <div class="day-marker"><div class="num">Day <em>09</em></div><span class="label">都市</span></div>
         <div class="day-body">
-          <div class="loc">CAVA 市集 · 聖保祿主教座堂</div>
-          <h4>面具與十字架</h4>
-          <p>參觀阿比讓地標藍頂清真寺,湛藍圓頂與白色尖塔形成強烈對比;再到造型獨特、現代主義的聖保祿主教座堂感受建築之美。</p>
+          <div class="loc">阿比尚市區</div>
+          <h4>市集、清真寺與教堂</h4>
+          <p>傳統市集採買，參觀藍色清真寺（湛藍圓頂與白色尖塔的視覺衝擊），走入造型獨特的聖保羅天主大教堂，最後前往特色手工藝品市集淘寶，感受阿比尚的文化多元。</p>
+          <div class="meal-row">
+            <span class="meal">早 <em>飯店內</em></span>
+            <span class="meal">午 <em>當地炸物餐</em></span>
+            <span class="meal">晚 <em>黎巴嫩料理</em></span>
+          </div>
         </div>
-        <div class="park-image"><img src="https://raw.githubusercontent.com/Wacandy78/burkina-ivory-tour/main/IMG_8824.jpeg" alt="教堂"></div>
+        <div class="day-image"><img src="https://raw.githubusercontent.com/Wacandy78/burkina-ivory-tour/main/IMG_8824.jpeg" alt="教堂"></div>
       </div>
 
       <div class="day-row reveal">
-        <div class="day-marker"><div class="num">Day <em>11</em></div><span class="label">都會</span></div>
+        <div class="day-marker"><div class="num">Day <em>10</em></div><span class="label">首都</span></div>
         <div class="day-body">
-          <div class="loc">阿比讓 · Abidjan</div>
-          <h4>城市的另一面</h4>
-          <p>探訪西非最大的藝術文物市集 CAVA,挑選非洲面具、雕塑與織品;午後到大型百貨體驗西非經濟樞紐的繁華現代。</p>
+          <div class="loc">Yamoussoukro · 政治首都</div>
+          <h4>四小時的朝聖之路</h4>
+          <p>車程四小時抵達象牙海岸政治首都 Yamoussoukro，參觀國會大廈，走訪象牙海岸理工大學感受學術氛圍，入住 Hotel President 總統大飯店，感受這座安靜首都的獨特氣質。</p>
+          <div class="meal-row">
+            <span class="meal">早 <em>飯店內</em></span>
+            <span class="meal">午 <em>野味餐廳</em></span>
+            <span class="meal">晚 <em>義大利餐廳</em></span>
+          </div>
         </div>
-        <div class="park-image"><img src="https://raw.githubusercontent.com/Wacandy78/burkina-ivory-tour/main/IMG_8940.jpeg" alt="cava"></div>
+        <div class="day-image"><img src="https://raw.githubusercontent.com/Wacandy78/burkina-ivory-tour/main/IMG_9114.jpeg" alt="Yamoussoukro"></div>
       </div>
 
       <div class="day-row reveal">
-        <div class="day-marker"><div class="num">Day <em>12</em></div><span class="label">聖殿</span></div>
+        <div class="day-marker"><div class="num">Day <em>11</em></div><span class="label">聖殿</span></div>
         <div class="day-body">
-          <div class="loc">亞穆蘇克羅 · Yamoussoukro</div>
-          <h4>世界最大的教堂</h4>
-          <p>驅車前往政治首都 Yamoussoukro,參觀金氏世界紀錄認證的最大天主教教堂——和平之后聖殿,雄偉穹頂與廣場,氣勢震撼。</p>
+          <div class="loc">和平之后聖殿 · 亞穆蘇克羅大清真寺</div>
+          <h4>光落下的地方</h4>
+          <p>由導遊帶領走入金氏世界紀錄最大天主教堂——和平之后聖殿，宏偉穹頂、彩繪玻璃、穿透光線令人屏息。下午參觀亞穆蘇克羅大清真寺，返回阿比尚。</p>
+          <div class="meal-row">
+            <span class="meal">早 <em>飯店內</em></span>
+            <span class="meal">午 <em>當地特色料理</em></span>
+            <span class="meal">晚 <em>湖岸龍蝦餐</em></span>
+          </div>
         </div>
-        <div class="park-image"><img src="https://raw.githubusercontent.com/Wacandy78/burkina-ivory-tour/main/IMG_8826.jpeg" alt="教堂"></div>
+        <div class="day-image"><img src="https://raw.githubusercontent.com/Wacandy78/burkina-ivory-tour/main/IMG_8826.jpeg" alt="聖殿"></div>
       </div>
 
       <div class="day-row reveal">
-        <div class="day-marker"><div class="num">Day <em>13</em></div><span class="label">雨林</span></div>
+        <div class="day-marker"><div class="num">Day <em>12</em></div><span class="label">雨林</span></div>
         <div class="day-body">
-          <div class="loc">班科國家公園 · 動物園</div>
-          <h4>城市裡的綠肺</h4>
-          <p>返回阿比讓近郊,走訪城市裡的熱帶雨林班科國家公園,並到國家動物園認識西非的原生動植物。</p>
+          <div class="loc">班科國家公園</div>
+          <h4>都市裡的綠肺</h4>
+          <p>走入阿比尚郊外的班科國家公園——全球面積第二大的城市原始熱帶雨林，叢林探索、城市綠肺、森林健行。繁華城市包裹著原始雨林，是象牙海岸自然保護的縮影。</p>
+          <div class="meal-row">
+            <span class="meal">早 <em>飯店內</em></span>
+            <span class="meal">午 <em>班科公園內</em></span>
+            <span class="meal">晚 <em>中式料理</em></span>
+          </div>
         </div>
-        <div class="park-image"><img src="https://raw.githubusercontent.com/Wacandy78/burkina-ivory-tour/main/IMG_9114.jpeg" alt="banco"></div>
+        <div class="day-image"><img src="https://raw.githubusercontent.com/Wacandy78/burkina-ivory-tour/main/IMG_8940.jpeg" alt="班科公園"></div>
       </div>
 
       <div class="day-row reveal">
-        <div class="day-marker"><div class="num">Day <em>14</em></div><span class="label">告別</span></div>
+        <div class="day-marker"><div class="num">Day <em>13</em></div><span class="label">告別</span></div>
         <div class="day-body">
-          <div class="loc">阿比讓 · Abidjan</div>
-          <h4>最後的城市漫步</h4>
-          <p>行程最後一天——阿比讓的自由時光。漫步 Plateau 商業區、回味街頭小吃、選購最後一批伴手禮,或者在飯店泳池畔整理相機裡的所有故事,為這趟西非之旅留下從容的結尾。</p>
+          <div class="loc">阿比尚 → ABJ 機場</div>
+          <h4>帶著故事出發</h4>
+          <p>當地超市最後購物，城市慢遊與自由活動，整理相機裡兩個國家的色彩與故事。送機前往阿比尚 ABJ 機場，結束象牙海岸段，正式啟程返台。</p>
+          <div class="meal-row">
+            <span class="meal">早 <em>飯店內</em></span>
+            <span class="meal">午 <em>美食廣場</em></span>
+            <span class="meal">晚 <em>義式料理</em></span>
+          </div>
         </div>
-        <div class="park-image"><img src="https://raw.githubusercontent.com/Wacandy78/burkina-ivory-tour/main/IMG_8820.jpeg" alt="abj"></div>
+        <div class="day-image"><img src="https://raw.githubusercontent.com/Wacandy78/burkina-ivory-tour/main/IMG_8820.jpeg" alt="阿比尚"></div>
       </div>
 
       <div class="day-row reveal">
-        <div class="day-marker"><div class="num">Day <em>15</em></div><span class="label">歸程</span></div>
+        <div class="day-marker"><div class="num">Day <em>14</em></div><span class="label">歸程</span></div>
         <div class="day-body">
-          <div class="loc">ABJ → TPE</div>
-          <h4>帶著故事返航</h4>
-          <p>凌晨自阿比讓國際機場搭機返台,帶著滿滿的故事、相機裡的西非色彩,結束這趟難忘的旅程。</p>
+          <div class="loc">轉機 → 抵達臺灣</div>
+          <h4>回家</h4>
+          <p>轉機後抵達臺灣機場，結束這場橫跨布吉納法索與象牙海岸、融合文化、信仰、生態與海岸的難忘西非十四日旅程。</p>
+          <div class="meal-row">
+            <span class="meal">早 <em>×</em></span>
+            <span class="meal">午 <em>×</em></span>
+            <span class="meal">晚 <em>×</em></span>
+          </div>
         </div>
         <div class="day-image"><img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=800&h=600&fit=crop" alt="機場"></div>
       </div>
@@ -486,6 +542,7 @@
   </div>
 </section>
 
+<!-- STAYS -->
 <section class="stays" id="stays">
   <div class="wrap">
     <div class="section-head">
@@ -494,73 +551,74 @@
         <span class="chap">— 夜晚的歸宿</span>
       </div>
       <div>
-        <h2 class="h2">十二<em>夜</em>。<br>四星與特色民宿。</h2>
-        <p class="desc lead">全程 12 晚住宿,精選四星級飯店、海濱度假村與在地特色民宿——讓每一晚都能好好休息,迎接隔天的西非。</p>
+        <h2 class="h2">十二<em>夜</em>。<br>四星與特色住宿。</h2>
+        <p class="desc lead">全程 12 晚住宿，精選四星級飯店、海濱度假村與首都地標旅館——讓每一晚都能好好休息，迎接隔天的西非。</p>
       </div>
     </div>
     <div class="stay-grid">
 
       <div class="stay reveal">
-        <div class="park-image"><img src="https://raw.githubusercontent.com/Wacandy78/burkina-ivory-tour/main/IMG_8073.jpeg" alt="hotel"></div>
+        <div class="stay-img"><img src="https://raw.githubusercontent.com/Wacandy78/burkina-ivory-tour/main/IMG_8073.jpeg" alt="hotel"></div>
         <div>
           <div class="stay-num">N° I</div>
-          <h4>瓦加杜古 · 市中心四星飯店</h4>
+          <h4>瓦加杜古 · Azalai / Zind Nabba / Sonia</h4>
           <div class="stay-meta">
             <span>🇧🇫 BURKINA FASO</span>
+            <span>Day 02–05 · <em>4 NIGHTS</em></span>
           </div>
-          <p>位於市中心、交通便利的國際級四星飯店,設施完善、安全度高。作為西非旅程的第一站,這裡是穩定而舒適的起點。</p>
+          <p>位於市中心、交通便利的四星飯店，設施完善、安全度高。是探索瓦加杜古市區、鱷魚池與蠟染村的穩定基地，每日出發的溫暖起點。</p>
         </div>
       </div>
 
       <div class="stay reveal">
-        <div class="park-image"><img src="https://raw.githubusercontent.com/Wacandy78/burkina-ivory-tour/main/IMG_9103.jpeg" alt="hotel"></div>
+        <div class="stay-img"><img src="https://raw.githubusercontent.com/Wacandy78/burkina-ivory-tour/main/IMG_8822.jpeg" alt="Assinie"></div>
         <div>
           <div class="stay-num">N° II</div>
-          <h4>瓦加杜古 · 特色商務四星飯店</h4>
+          <h4>La Maison d'akoula · 海邊渡假村</h4>
           <div class="stay-meta">
-            <span>🇧🇫 BURKINA FASO</span>
+            <span>🇨🇮 CÔTE D'IVOIRE · Assinie</span>
+            <span>Day 06–08 · <em>3 NIGHTS</em></span>
           </div>
-          <p>換個角度體驗瓦加杜古的城市生活。飯店附設泳池與餐廳,讓你白天探索市集與紀念館,晚上充分休息。</p>
+          <p>象牙海岸東南部精品海邊渡假村，僅有一大床和兩大床聯通房，私密靜謐。潟湖生態導覽、可可農場與遊船體驗就在門外，是從薩赫勒紅土轉換為大西洋藍的溫柔過渡。</p>
         </div>
       </div>
 
       <div class="stay reveal">
-        <div class="park-image"><img src="https://raw.githubusercontent.com/Wacandy78/burkina-ivory-tour/main/IMG_8822.jpeg" alt="hotel"></div>
+        <div class="stay-img"><img src="https://raw.githubusercontent.com/Wacandy78/burkina-ivory-tour/main/IMG_8950.jpeg" alt="Abidjan"></div>
         <div>
           <div class="stay-num">N° III</div>
-          <h4>阿西尼 · 潟湖海濱度假村</h4>
+          <h4>阿比尚 · Baobab Onomo / Pullman / Novotel</h4>
           <div class="stay-meta">
-            <span>🇨🇮 CÔTE D'IVOIRE</span>
+            <span>🇨🇮 CÔTE D'IVOIRE · Abidjan</span>
+            <span>Day 09 · <em>1 NIGHT</em></span>
           </div>
-          <p>隱於潟湖與大西洋之間的特色度假村,擁有私人海灘與獨棟木屋——西非難得一見的悠閒度假體驗,是行程中段的溫柔停頓。</p>
+          <p>阿比尚市中心四星飯店，探索傳統市集、藍色清真寺與聖保羅教堂的最佳落腳點，也是前往 Yamoussoukro 的出發基地。</p>
         </div>
       </div>
 
       <div class="stay reveal">
-        <div class="park-image"><img src="https://raw.githubusercontent.com/Wacandy78/burkina-ivory-tour/main/IMG_8950.jpeg" alt="onomo"></div>
+        <div class="stay-img"><img src="https://raw.githubusercontent.com/Wacandy78/burkina-ivory-tour/main/IMG_8951.jpeg" alt="Yamoussoukro"></div>
         <div>
           <div class="stay-num">N° IV</div>
-          <h4>阿比讓 · 精品公寓型住宿</h4>
+          <h4>Hotel President · 總統大飯店</h4>
           <div class="stay-meta">
-            <span>🇨🇮 CÔTE D'IVOIRE</span>
+            <span>🇨🇮 CÔTE D'IVOIRE · Yamoussoukro</span>
+            <span>Day 10 · <em>1 NIGHT</em></span>
           </div>
-          <p>阿比讓 Plateau 區的精品公寓型住宿,空間寬敞、廚房齊備,適合長時間停留,感受當地人的生活節奏與城市脈動。</p>
+          <p>象牙海岸政治首都的代表性地標飯店，距世界最大天主教堂與大清真寺咫尺之遙，曾是國家級接待的重要場域，承載著這座首都獨特的歷史分量。</p>
         </div>
       </div>
 
       <div class="stay reveal">
-        <div class="park-image"><img src="https://raw.githubusercontent.com/Wacandy78/burkina-ivory-tour/main/IMG_8951.jpeg" alt="hotel"></div>
+        <div class="stay-img"><img src="https://raw.githubusercontent.com/Wacandy78/burkina-ivory-tour/main/IMG_9103.jpeg" alt="Abidjan 2"></div>
         <div>
           <div class="stay-num">N° V</div>
-          <h4>亞穆蘇克羅 · 四星飯店 </h4>
+          <h4>阿比尚 · Baobab Onomo / Pullman / Novotel</h4>
           <div class="stay-meta">
-            <span>🇨🇮 CÔTE D'IVOIRE</span>
+            <span>🇨🇮 CÔTE D'IVOIRE · Abidjan</span>
+            <span>Day 11–12 · <em>2 NIGHTS</em></span>
           </div>
-          <p>象牙海岸政治首都亞穆索科的代表性地標飯店。</p>
-        </div>
-      </div>
-
-      
+          <p>返回阿比尚的最後兩夜，探索班科國家公園、湖岸龍蝦晚餐與最後的城市漫遊，為整趟旅程留下從容的收尾。</p>
         </div>
       </div>
 
@@ -568,6 +626,7 @@
   </div>
 </section>
 
+<!-- EXPERIENCES -->
 <section class="experiences" id="experiences">
   <div class="wrap">
     <div class="section-head dark">
@@ -583,28 +642,29 @@
     <div class="exp-grid">
       <div class="exp reveal">
         <div class="exp-num">N° 01</div>
-        <h4>水煙露天酒吧之夜</h4>
-        <p>瓦加杜古夜晚的代表場景。星空下的露天酒吧、當地朋友、水煙、現場音樂——這是西非夜生活最真實的樣貌,也是返台後最常被回憶起的一夜。</p>
+        <h4>神聖鱷魚的餵食儀式</h4>
+        <p>巴佐列聖鱷魚池，傳說鱷魚受神靈守護、從不傷人。親手拿著食物走近那些巨大的爬行動物——這是布吉納法索獨有的、介於信仰與自然之間的奇異體驗。</p>
       </div>
       <div class="exp reveal">
         <div class="exp-num">N° 02</div>
-        <h4>在地家庭文化交流</h4>
-        <p>透過當地人脈,在布吉納法索有機會走進在地家庭——聊聊生活、嚐嚐家常菜,進行真實的、不被包裝的文化交流。</p>
+        <h4>蠟染村的手染時光</h4>
+        <p>走入瓦加杜古郊外的蠟染村，親手體驗西非傳統蠟染布的製作過程。色彩從白布上緩緩滲出的那一刻，是整趟旅程中最像「帶走了什麼」的一刻。</p>
       </div>
       <div class="exp reveal">
         <div class="exp-num">N° 03</div>
-        <h4>西非美食日日嚐</h4>
-        <p>每日午餐精選當地特色或西式餐廳:Tô(布國國菜)、Attiéké(木薯飯)、烤魚、Kedjenou(燉雞)——不重複的味蕾旅程,是一場用舌尖認識西非的方式。</p>
+        <h4>可可農場的巧克力誕生</h4>
+        <p>象牙海岸是全球最大可可產國。走入農場，從樹上摘下可可豆，親身參與發酵、烘焙到巧克力製作的完整過程——用雙手認識世界最甜蜜的西非貢獻。</p>
       </div>
       <div class="exp reveal">
         <div class="exp-num">N° 04</div>
-        <h4>全程專業人員隨行</h4>
-        <p>專屬中型巴士、專職司機、專業保全貼身服務——讓你能完全放鬆,專注享受旅程本身。這趟行程的「安心」是寫進每一天的。</p>
+        <h4>光落在聖殿的那一秒</h4>
+        <p>走入和平之后聖殿大教堂，彩繪玻璃的光線在大理石地板上散落。無論信仰背景，這個時刻讓人安靜下來——金氏世界紀錄的最大教堂，建築本身就是一種語言。</p>
       </div>
     </div>
   </div>
 </section>
 
+<!-- PRICING -->
 <section class="pricing" id="pricing">
   <div class="wrap">
     <div class="section-head">
@@ -613,40 +673,42 @@
         <span class="chap">— 加入旅程</span>
       </div>
       <div>
-    <div class="price-row">
-      <div class="price-display reveal">
-        <div class="meta">兩人一室 ·</div>
-        <div class="per">/ 每人 · Per Person</div>
-        <p class="note">15 天 12 晚,含非洲內陸機票、住宿、簽證、私人巴士、司機、專業保全、每日餐食、所有景點門票。</p>
-        <div class="cta-row">
-          <a href="#" class="btn btn-gold">立即洽詢報名 →</a>
-          <a href="#itinerary" class="btn btn-line">查看行程</a>
-        </div>
-      </div>
-      <div class="price-detail reveal">
-        <div>
-          <h5>包含項目</h5>
-          <ul>
-            <li>非洲內陸段機票</li>
-            <li>兩國簽證費用</li>
-            <li>12 晚住宿(含早餐)</li>
-            <li>全程私人中巴與司機</li>
-            <li>專業保全貼身服務</li>
-            <li>每日精選道地午餐</li>
-            <li>所有景點門票費用</li>
-            <li>司機與嚮導必要小費</li>
-            <li>合作旅行社行政與責任險</li>
-          </ul>
-        </div>
-        <div>
-          <h5>不包含項目</h5>
-          <ul>
-            <li>國際往返機票(經濟艙)</li>
-            <li>個人護照申辦費用</li>
-            <li>黃熱病疫苗等醫療費</li>
-            <li>個人消費購物與酒水</li>
-            <li>個人加保旅平險、醫療險</li>
-          </ul>
+        <div class="price-row">
+          <div class="price-display reveal">
+            <div class="meta">兩人一室 · 每人</div>
+            <div class="per">/ Per Person · 14 Days</div>
+            <p class="note">14 天 12 晚，含非洲內陸機票、住宿、簽證、私人巴士、司機、專業保全、每日餐食、所有景點門票。</p>
+            <div class="cta-row">
+              <a href="#" class="btn btn-gold">立即洽詢報名 →</a>
+              <a href="#itinerary" class="btn btn-line">查看行程</a>
+            </div>
+          </div>
+          <div class="price-detail reveal">
+            <div>
+              <h5>包含項目</h5>
+              <ul>
+                <li>非洲內陸段機票</li>
+                <li>兩國簽證費用</li>
+                <li>12 晚住宿（含早餐）</li>
+                <li>全程私人中巴與司機</li>
+                <li>專業保全貼身服務</li>
+                <li>每日精選道地午餐</li>
+                <li>所有景點門票費用</li>
+                <li>司機與嚮導必要小費</li>
+                <li>合作旅行社行政與責任險</li>
+              </ul>
+            </div>
+            <div>
+              <h5>不包含項目</h5>
+              <ul>
+                <li>國際往返機票（經濟艙）</li>
+                <li>個人護照申辦費用</li>
+                <li>黃熱病疫苗等醫療費</li>
+                <li>個人消費購物與酒水</li>
+                <li>個人加保旅平險、醫療險</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -663,7 +725,8 @@
       <div class="foot-col">
         <h6>行程</h6>
         <ul>
-          <li><a href="#itinerary">完整 15 天日誌</a></li>
+          <li><a href="#cities">四座城市</a></li>
+          <li><a href="#itinerary">完整 14 天日誌</a></li>
           <li><a href="#stays">12 晚住宿</a></li>
           <li><a href="#experiences">特色體驗</a></li>
         </ul>
@@ -697,4 +760,4 @@
 </script>
 
 </body>
-</html> 
+</html>
